@@ -15,9 +15,12 @@ import dotenv
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PROJECT_DIR = os.path.dirname(BASE_DIR)
+SRC_DIR = BASE_DIR
+AUX_DIR = os.path.join(PROJECT_DIR, "aux")
 
 # load env variables:
-dotenv_file = os.path.join(os.path.dirname(BASE_DIR), ".env")
+dotenv_file = os.path.join(PROJECT_DIR, ".env")
 if os.path.isfile(dotenv_file):
     dotenv.load_dotenv(dotenv_file)
 
@@ -126,4 +129,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(AUX_DIR, 'static')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
