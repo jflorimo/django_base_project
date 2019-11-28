@@ -31,6 +31,7 @@ if os.path.isfile(dotenv_file):
 SECRET_KEY = os.environ.get('SECRET_KEY', 'd!&5zuo%z@mw$&hq3pvts05+)h9y*w4x)@t6o2^p#njn@etfr$')
 
 # SECURITY WARNING: don't run with debug turned on in production!
+ENVIRONMENT = os.environ.get('ENVIRONMENT')
 DEBUG = os.environ.get('DEBUG')
 
 ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS").split()
@@ -82,14 +83,7 @@ WSGI_APPLICATION = 'project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-if DEBUG:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        }
-    }
-else:
+if ENVIRONMENT == "PROD":
     DATABASES = {
         "default": {
             "ENGINE": "django.db.backends.postgresql_psycopg2",
@@ -98,6 +92,13 @@ else:
             "PASSWORD": os.environ.get("POSTGRES_PASSWORD"),
             "HOST": os.environ.get("DATABASE_URL"),
             "PORT": os.environ.get("POSTGRES_PORT"),
+        }
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         }
     }
 
