@@ -1,2 +1,2 @@
-# floricapi
-stock market capitalization and statistics
+# django project
+Already configured django project
