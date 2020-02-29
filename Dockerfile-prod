@@ -1,0 +1,47 @@
+FROM python:3.7.4-slim-buster AS builder
+
+ENV PYTHONUNBUFFERED 1
+ENV PATH=/venv/bin/:$PATH
+
+RUN apt-get update \
+    && apt-get upgrade -y \
+    && apt-get install -y --no-install-recommends \
+       gcc \
+       git \
+       libmagic-dev \
+       openssh-client \
+       python-dev \
+    && rm -rf /var/lib/apt/lists/* \
+    && python3 -m venv /venv/
+
+# Install dependencies
+COPY etc/requirements/dev.txt /etc/requirements.txt
+RUN pip3 install --no-cache-dir -r /etc/requirements.txt
+
+
+FROM python:3.7.4-slim-buster
+
+ENV PYTHONUNBUFFERED 1
+ENV PATH=/venv/bin/:$PATH
+
+RUN apt-get update \
+    && apt-get upgrade -y \
+    && apt-get install -y --no-install-recommends \
+       gettext \
+       iproute2 \
+       libmagic-dev \
+    && rm -rf /var/lib/apt/lists/* \
+    && python3 -m venv /venv/
+
+COPY --from=builder /venv/ /venv/
+COPY etc/start.sh /app/src/
+RUN chmod +x /app/src/start.sh \
+    && mkdir -p /app/src /app/aux
+COPY src /app/src
+
+WORKDIR /app/src/
+
+ENV USER django
+RUN useradd --create-home $USER
+RUN chown -R $USER /app/src/start.sh /venv/ /app/
+USER $USER

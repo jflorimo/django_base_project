@@ -1,0 +1,8 @@
+build:
+  docker:
+    web: Dockerfile-prod
+    worker: Dockerfile-prod
+
+run:
+  web: /app/src/start.sh
+  worker: celery -A project worker -l info

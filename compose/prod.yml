@@ -1,0 +1,22 @@
+version: '2'
+
+services:
+  postgres:
+    restart: always
+    image: postgres:9.6.4-alpine
+    env_file:
+      - ../.env
+
+  django:
+    restart: always
+    build:
+      context: ..
+      dockerfile: etc/django/Dockerfile-prod
+    ports:
+      - "80:4000"
+    volumes:
+      - ../:/app/
+    depends_on:
+      - postgres
+    env_file:
+      - ../.env
