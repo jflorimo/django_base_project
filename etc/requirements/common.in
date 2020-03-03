@@ -4,6 +4,7 @@ dj-database-url
 django
 djangorestframework
 django-environ
+django-extensions
 django-filter
 gunicorn
 ipdb

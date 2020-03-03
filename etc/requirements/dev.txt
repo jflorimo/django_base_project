@@ -21,6 +21,7 @@ decorator==4.4.2          # via ipython, traitlets
 defusedxml==0.6.0         # via nbconvert
 dj-database-url==0.5.0    # via -r common.in
 django-environ==0.4.5     # via -r common.in
+django-extensions==2.2.8  # via -r common.in
 django-filter==2.2.0      # via -r common.in
 django==3.0.3             # via -r common.in, django-filter, djangorestframework, model-mommy
 djangorestframework==3.11.0  # via -r common.in
@@ -76,7 +77,7 @@ qtpy==1.9.0               # via qtconsole
 regex==2020.2.20          # via black
 requests==2.23.0          # via -r common.in
 send2trash==1.5.0         # via notebook
-six==1.14.0               # via bleach, jsonschema, packaging, python-dateutil, traitlets
+six==1.14.0               # via bleach, django-extensions, jsonschema, packaging, python-dateutil, traitlets
 sqlparse==0.3.1           # via django
 terminado==0.8.3          # via notebook
 testpath==0.4.4           # via nbconvert
