@@ -6,4 +6,4 @@ with open(config_path) as config:
     exec(config.read())
 
 
-__version__ = "1"
+__version__ = "2"
