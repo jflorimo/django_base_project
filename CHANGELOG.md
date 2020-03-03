@@ -1,5 +1,7 @@
 # Changelog
 ## [Unreleased]
+### Added
+- django shell_plus
 
 ## [1] - 2020-03-02
 ### Changed
