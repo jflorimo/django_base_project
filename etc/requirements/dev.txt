@@ -6,6 +6,7 @@
 #
 amqp==2.5.2               # via kombu
 appdirs==1.4.3            # via black
+argon2-cffi==20.1.0       # via notebook
 asgiref==3.2.3            # via django
 attrs==19.3.0             # via black, jsonschema, pytest
 backcall==0.1.0           # via ipython
@@ -14,6 +15,7 @@ black==19.10b0            # via -r common.in
 bleach==3.1.1             # via nbconvert
 celery==4.4.1             # via -r common.in
 certifi==2019.11.28       # via requests
+cffi==1.14.3              # via argon2-cffi
 chardet==3.0.4            # via requests
 click==7.0                # via black
 coverage==5.0.3           # via pytest-cov
@@ -28,7 +30,6 @@ djangorestframework==3.11.0  # via -r common.in
 entrypoints==0.3          # via nbconvert
 gunicorn==20.0.4          # via -r common.in
 idna==2.9                 # via requests
-importlib-metadata==1.5.0  # via jsonschema, kombu, pluggy, pytest
 ipdb==0.13.1              # via -r common.in
 ipykernel==5.1.4          # via ipywidgets, jupyter, jupyter-console, notebook, qtconsole
 ipython-genutils==0.2.0   # via nbformat, notebook, qtconsole, traitlets
@@ -49,7 +50,7 @@ model-mommy==2.0.0        # via -r common.in
 more-itertools==8.2.0     # via pytest
 nbconvert==5.6.1          # via jupyter, notebook
 nbformat==5.0.4           # via ipywidgets, nbconvert, notebook
-notebook==6.0.3           # via jupyter, widgetsnbextension
+notebook==6.1.5           # via jupyter, widgetsnbextension
 packaging==20.1           # via pytest
 pandocfilters==1.4.2      # via nbconvert
 parso==0.6.2              # via jedi
@@ -62,6 +63,7 @@ prompt-toolkit==3.0.3     # via ipython, jupyter-console
 psycopg2-binary==2.8.4    # via -r common.in
 ptyprocess==0.6.0         # via pexpect, terminado
 py==1.8.1                 # via pytest
+pycparser==2.20           # via cffi
 pygments==2.5.2           # via ipython, jupyter-console, nbconvert, qtconsole
 pyparsing==2.4.6          # via packaging
 pyrsistent==0.15.7        # via jsonschema
@@ -77,7 +79,7 @@ qtpy==1.9.0               # via qtconsole
 regex==2020.2.20          # via black
 requests==2.23.0          # via -r common.in
 send2trash==1.5.0         # via notebook
-six==1.14.0               # via bleach, django-extensions, jsonschema, packaging, python-dateutil, traitlets
+six==1.14.0               # via argon2-cffi, bleach, django-extensions, jsonschema, packaging, python-dateutil, traitlets
 sqlparse==0.3.1           # via django
 terminado==0.8.3          # via notebook
 testpath==0.4.4           # via nbconvert
@@ -91,7 +93,6 @@ wcwidth==0.1.8            # via prompt-toolkit, pytest
 webencodings==0.5.1       # via bleach
 whitenoise==5.0.1         # via -r common.in
 widgetsnbextension==3.5.1  # via ipywidgets
-zipp==3.0.0               # via importlib-metadata
 
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools
