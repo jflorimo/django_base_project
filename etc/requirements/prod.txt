@@ -4,96 +4,263 @@
 #
 #    pip-compile --output-file=prod.txt prod.in
 #
-amqp==2.5.2               # via kombu
-appdirs==1.4.3            # via black
-asgiref==3.2.3            # via django
-attrs==19.3.0             # via black, jsonschema, pytest
-backcall==0.1.0           # via ipython
-billiard==3.6.3.0         # via celery
-black==19.10b0            # via -r common.in
-bleach==3.1.1             # via nbconvert
-celery==4.4.1             # via -r common.in
-certifi==2019.11.28       # via requests
-chardet==3.0.4            # via requests
-click==7.0                # via black
-coverage==5.0.3           # via pytest-cov
-decorator==4.4.2          # via ipython, traitlets
-defusedxml==0.6.0         # via nbconvert
-dj-database-url==0.5.0    # via -r common.in
-django-environ==0.4.5     # via -r common.in
-django-extensions==2.2.8  # via -r common.in
-django-filter==2.2.0      # via -r common.in
-django==3.0.3             # via -r common.in, django-filter, djangorestframework, model-mommy
-djangorestframework==3.11.0  # via -r common.in
-entrypoints==0.3          # via nbconvert
-gevent==1.4.0             # via -r prod.in
-greenlet==0.4.15          # via gevent
-gunicorn==20.0.4          # via -r common.in, -r prod.in
-idna==2.9                 # via requests
-importlib-metadata==1.5.0  # via jsonschema, kombu, pluggy, pytest
-ipdb==0.13.1              # via -r common.in
-ipykernel==5.1.4          # via ipywidgets, jupyter, jupyter-console, notebook, qtconsole
-ipython-genutils==0.2.0   # via nbformat, notebook, qtconsole, traitlets
-ipython==7.13.0           # via -r common.in, ipdb, ipykernel, ipywidgets, jupyter-console
-ipywidgets==7.5.1         # via jupyter
-jedi==0.16.0              # via ipython
-jinja2==2.11.1            # via nbconvert, notebook
-jsonschema==3.2.0         # via nbformat
-jupyter-client==6.0.0     # via ipykernel, jupyter-console, notebook, qtconsole
-jupyter-console==6.1.0    # via jupyter
-jupyter-core==4.6.3       # via jupyter-client, nbconvert, nbformat, notebook, qtconsole
-jupyter==1.0.0            # via -r common.in
-kombu==4.6.8              # via celery
-markdown==3.2.1           # via -r common.in
-markupsafe==1.1.1         # via jinja2
-mistune==0.8.4            # via nbconvert
-model-mommy==2.0.0        # via -r common.in
-more-itertools==8.2.0     # via pytest
-nbconvert==5.6.1          # via jupyter, notebook
-nbformat==5.0.4           # via ipywidgets, nbconvert, notebook
-notebook==6.0.3           # via jupyter, widgetsnbextension
-packaging==20.1           # via pytest
-pandocfilters==1.4.2      # via nbconvert
-parso==0.6.2              # via jedi
-pathspec==0.7.0           # via black
-pexpect==4.8.0            # via ipython
-pickleshare==0.7.5        # via ipython
-pluggy==0.13.1            # via pytest
-prometheus-client==0.7.1  # via notebook
-prompt-toolkit==3.0.3     # via ipython, jupyter-console
-psycopg2-binary==2.8.4    # via -r common.in
-ptyprocess==0.6.0         # via pexpect, terminado
-py==1.8.1                 # via pytest
-pygments==2.5.2           # via ipython, jupyter-console, nbconvert, qtconsole
-pyparsing==2.4.6          # via packaging
-pyrsistent==0.15.7        # via jsonschema
-pytest-cov==2.8.1         # via -r common.in
-pytest-django==3.8.0      # via -r common.in
-pytest==5.3.5             # via pytest-cov, pytest-django
-python-dateutil==2.8.1    # via jupyter-client
-python-dotenv==0.12.0     # via -r common.in
-pytz==2019.3              # via -r common.in, celery, django
-pyzmq==19.0.0             # via jupyter-client, notebook
-qtconsole==4.7.1          # via jupyter
-qtpy==1.9.0               # via qtconsole
-regex==2020.2.20          # via black
-requests==2.23.0          # via -r common.in
-send2trash==1.5.0         # via notebook
-six==1.14.0               # via bleach, django-extensions, jsonschema, packaging, python-dateutil, traitlets
-sqlparse==0.3.1           # via django
-terminado==0.8.3          # via notebook
-testpath==0.4.4           # via nbconvert
-toml==0.10.0              # via black
-tornado==6.0.3            # via ipykernel, jupyter-client, notebook, terminado
-traitlets==4.3.3          # via ipykernel, ipython, ipywidgets, jupyter-client, jupyter-core, nbconvert, nbformat, notebook, qtconsole
-typed-ast==1.4.1          # via black
-urllib3==1.25.8           # via requests
-vine==1.3.0               # via amqp, celery
-wcwidth==0.1.8            # via prompt-toolkit, pytest
-webencodings==0.5.1       # via bleach
-whitenoise==5.0.1         # via -r common.in
-widgetsnbextension==3.5.1  # via ipywidgets
-zipp==3.0.0               # via importlib-metadata
+amqp==2.5.2
+    # via kombu
+appdirs==1.4.3
+    # via black
+asgiref==3.2.3
+    # via django
+attrs==19.3.0
+    # via
+    #   black
+    #   jsonschema
+    #   pytest
+backcall==0.1.0
+    # via ipython
+billiard==3.6.3.0
+    # via celery
+black==19.10b0
+    # via -r common.in
+bleach==3.1.1
+    # via nbconvert
+celery==4.4.1
+    # via -r common.in
+certifi==2019.11.28
+    # via requests
+chardet==3.0.4
+    # via requests
+click==7.0
+    # via black
+coverage==5.0.3
+    # via pytest-cov
+decorator==4.4.2
+    # via
+    #   ipython
+    #   traitlets
+defusedxml==0.6.0
+    # via nbconvert
+dj-database-url==0.5.0
+    # via -r common.in
+django-environ==0.4.5
+    # via -r common.in
+django-extensions==2.2.8
+    # via -r common.in
+django-filter==2.2.0
+    # via -r common.in
+django==3.0.12
+    # via
+    #   -r common.in
+    #   django-filter
+    #   djangorestframework
+    #   model-mommy
+djangorestframework==3.11.0
+    # via -r common.in
+entrypoints==0.3
+    # via nbconvert
+gevent==1.4.0
+    # via -r prod.in
+greenlet==0.4.15
+    # via gevent
+gunicorn==20.0.4
+    # via
+    #   -r common.in
+    #   -r prod.in
+idna==2.9
+    # via requests
+ipdb==0.13.1
+    # via -r common.in
+ipykernel==5.1.4
+    # via
+    #   ipywidgets
+    #   jupyter
+    #   jupyter-console
+    #   notebook
+    #   qtconsole
+ipython-genutils==0.2.0
+    # via
+    #   nbformat
+    #   notebook
+    #   qtconsole
+    #   traitlets
+ipython==7.13.0
+    # via
+    #   -r common.in
+    #   ipdb
+    #   ipykernel
+    #   ipywidgets
+    #   jupyter-console
+ipywidgets==7.5.1
+    # via jupyter
+jedi==0.16.0
+    # via ipython
+jinja2==2.11.1
+    # via
+    #   nbconvert
+    #   notebook
+jsonschema==3.2.0
+    # via nbformat
+jupyter-client==6.0.0
+    # via
+    #   ipykernel
+    #   jupyter-console
+    #   notebook
+    #   qtconsole
+jupyter-console==6.1.0
+    # via jupyter
+jupyter-core==4.6.3
+    # via
+    #   jupyter-client
+    #   nbconvert
+    #   nbformat
+    #   notebook
+    #   qtconsole
+jupyter==1.0.0
+    # via -r common.in
+kombu==4.6.8
+    # via celery
+markdown==3.2.1
+    # via -r common.in
+markupsafe==1.1.1
+    # via jinja2
+mistune==0.8.4
+    # via nbconvert
+model-mommy==2.0.0
+    # via -r common.in
+more-itertools==8.2.0
+    # via pytest
+nbconvert==5.6.1
+    # via
+    #   jupyter
+    #   notebook
+nbformat==5.0.4
+    # via
+    #   ipywidgets
+    #   nbconvert
+    #   notebook
+notebook==6.0.3
+    # via
+    #   jupyter
+    #   widgetsnbextension
+packaging==20.1
+    # via pytest
+pandocfilters==1.4.2
+    # via nbconvert
+parso==0.6.2
+    # via jedi
+pathspec==0.7.0
+    # via black
+pexpect==4.8.0
+    # via ipython
+pickleshare==0.7.5
+    # via ipython
+pluggy==0.13.1
+    # via pytest
+prometheus-client==0.7.1
+    # via notebook
+prompt-toolkit==3.0.3
+    # via
+    #   ipython
+    #   jupyter-console
+psycopg2-binary==2.8.4
+    # via -r common.in
+ptyprocess==0.6.0
+    # via
+    #   pexpect
+    #   terminado
+py==1.8.1
+    # via pytest
+pygments==2.5.2
+    # via
+    #   ipython
+    #   jupyter-console
+    #   nbconvert
+    #   qtconsole
+pyparsing==2.4.6
+    # via packaging
+pyrsistent==0.15.7
+    # via jsonschema
+pytest-cov==2.8.1
+    # via -r common.in
+pytest-django==3.8.0
+    # via -r common.in
+pytest==5.3.5
+    # via
+    #   pytest-cov
+    #   pytest-django
+python-dateutil==2.8.1
+    # via jupyter-client
+python-dotenv==0.12.0
+    # via -r common.in
+pytz==2019.3
+    # via
+    #   -r common.in
+    #   celery
+    #   django
+pyzmq==19.0.0
+    # via
+    #   jupyter-client
+    #   notebook
+qtconsole==4.7.1
+    # via jupyter
+qtpy==1.9.0
+    # via qtconsole
+regex==2020.2.20
+    # via black
+requests==2.23.0
+    # via -r common.in
+send2trash==1.5.0
+    # via notebook
+six==1.14.0
+    # via
+    #   bleach
+    #   django-extensions
+    #   jsonschema
+    #   packaging
+    #   python-dateutil
+    #   traitlets
+sqlparse==0.3.1
+    # via django
+terminado==0.8.3
+    # via notebook
+testpath==0.4.4
+    # via nbconvert
+toml==0.10.0
+    # via black
+tornado==6.0.3
+    # via
+    #   ipykernel
+    #   jupyter-client
+    #   notebook
+    #   terminado
+traitlets==4.3.3
+    # via
+    #   ipykernel
+    #   ipython
+    #   ipywidgets
+    #   jupyter-client
+    #   jupyter-core
+    #   nbconvert
+    #   nbformat
+    #   notebook
+    #   qtconsole
+typed-ast==1.4.1
+    # via black
+urllib3==1.25.8
+    # via requests
+vine==1.3.0
+    # via
+    #   amqp
+    #   celery
+wcwidth==0.1.8
+    # via
+    #   prompt-toolkit
+    #   pytest
+webencodings==0.5.1
+    # via bleach
+whitenoise==5.0.1
+    # via -r common.in
+widgetsnbextension==3.5.1
+    # via ipywidgets
 
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools
