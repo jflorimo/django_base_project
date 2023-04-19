@@ -1,4 +1,4 @@
-FROM python:3.7.4-slim-buster AS builder
+FROM python:3.11.3-slim-buster AS builder
 
 ENV PYTHONUNBUFFERED 1
 ENV PATH=/venv/bin/:$PATH
@@ -19,7 +19,7 @@ COPY etc/requirements/dev.txt /etc/requirements.txt
 RUN pip3 install --no-cache-dir -r /etc/requirements.txt
 
 
-FROM python:3.7.4-slim-buster
+FROM python:3.11.3-slim-buster
 
 ENV PYTHONUNBUFFERED 1
 ENV PATH=/venv/bin/:$PATH

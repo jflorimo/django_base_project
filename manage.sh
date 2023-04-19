@@ -9,7 +9,7 @@ function get_env() {
 function d-c() {
     project=$(basename $(pwd))
     env=$(get_env ENVIRONMENT | tr '[[:upper:]]' '[[:lower:]]')
-    docker-compose -p ${project} -f compose/${env}.yml "$@"
+    docker compose -p ${project} -f compose/${env}.yml "$@"
 }
 
 # Manage the creation of a release and hotfix branches
