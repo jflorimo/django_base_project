@@ -3,13 +3,13 @@ version: '2'
 services:
   postgres:
     restart: unless-stopped
-    image: postgres:9.6.4-alpine
+    image: postgres:15.2-alpine
     env_file:
       - ../.env
 
   rabbitmq:
     restart: unless-stopped
-    image: rabbitmq:3.7.8
+    image: rabbitmq:3.11.3
     env_file:
       - ../.env
 
