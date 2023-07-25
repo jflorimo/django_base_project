@@ -35,7 +35,7 @@ bleach==6.0.0
     # via nbconvert
 celery==5.2.7
     # via -r common.in
-certifi==2022.12.7
+certifi==2023.7.22
     # via requests
 cffi==1.15.1
     # via argon2-cffi-bindings
@@ -84,8 +84,6 @@ django-filter==23.1
     # via -r common.in
 djangorestframework==3.14.0
     # via -r common.in
-exceptiongroup==1.1.1
-    # via pytest
 executing==1.2.0
     # via stack-data
 fastjsonschema==2.16.3
@@ -357,12 +355,6 @@ terminado==0.17.1
     #   notebook
 tinycss2==1.2.1
     # via nbconvert
-tomli==2.0.1
-    # via
-    #   black
-    #   coverage
-    #   ipdb
-    #   pytest
 tornado==6.3
     # via
     #   ipykernel
